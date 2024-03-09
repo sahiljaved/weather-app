@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("https://nordicapis.com/wp-content/uploads/How-to-Build-an-API-Driven-Weather-App.png");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 105px;
+    /* background-image: url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    background-size: cover;
+    background-color: rgba(211, 208, 57, 0.2);
+    padding: 28px 32px;
+
+    overflow: hidden;
+    border-radius: 18px;
+    border: 2px solid rgb(177, 180, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.6s ease-out;
+
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+}
+
+.search-box input{
+    color: rgb(22, 22, 67);
+    width: 80%;
+    height: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: none;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: 2px solid rgb(177, 180, 0);
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(22, 22, 67);
+    text-transform: capitalize;
+
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: rgb(22, 22, 67);
+    background: white;
+    border-radius: 50%;
+    font-size: 22px;
+    border: 2px solid rgb(177, 180, 0);
+    /* transition: 0.4s ease; */
+
+}
+
+.search-box button:hover{
+    color: white;
+    background: rgb(198, 198, 255);;
+
+}
+
+.search-box i{
+    /* position: absolute; */
+    color: rgb(22, 22, 67); 
+    font-size: 20px;
+}
+
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box img{
+    width: 60%;
+    margin-top: 20px;
+}
+
+
+.weather-box .temperature{
+    position: relative;
+    color: black;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+
+.weather-box .temperature span{
+    position:absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+
+.weather-box .description{
+    position: relative;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.weather-details p{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale:0;
+    opacity: 0;
+    display: none;
+}
+
+
+.not-found img{
+    width: 70%;
+}
+
+
+.not-found p{
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather-box .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+.weather-details .humidity, .weather-details .wind-speed{
+    display: flex;
+    align-self: center;
+    width: 50%;
+    height: 100px;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind-{
+    padding-left: 20px;
+    justify-content: flex-end;
+}
+
+
+
+.weather-details i{
+    color: black;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-details span{
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+.heading{
+    color: rgb(85, 86, 12);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+    font: 800 35px Arial;
+  -webkit-text-fill-color: yellow;
+  -webkit-text-stroke: 2px;
+    
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 8% 10%;
+        margin: 30px;
+    }
+
+    .search-box input {
+        width: 70%;
+    }
+
+    .weather-box .temperature {
+        font-size: 2rem; /* Adjusted font size */
+    }
+
+    .weather-box .temperature span {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .weather-box .description {
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .weather-details p {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .not-found p {
+        font-size: 1rem; /* Adjusted font size */
+    }
+}
+
+
+@keyframes fadeIn {
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
