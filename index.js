@@ -6,6 +6,14 @@ const error404 = document.querySelector(".not-found")
 const weatherBox  = document.querySelector(".weather-box");
 const weatherDetails  = document.querySelector(".weather-details");
 
+
+document.addEventListener('keypress', (e) => {
+    // console.log(e.key)
+    if(e.key === 'Enter'){
+        document.getElementById('search-btn').click();
+    }
+})
+
 search.addEventListener('click', () => {
     const API_KEY = "7f33f271b41d457dc670d401e2e2bd41";
     const city = document.querySelector(".search-box input").value;
@@ -17,7 +25,7 @@ search.addEventListener('click', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
 
         if(data.cod === '404'){
             container.style.height = '400px';
